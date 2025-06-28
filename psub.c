@@ -34,7 +34,7 @@ int main(int arg, char** argv)
     int e = 0;
     for (e = 0; e <= menor_grau; e++)
     {
-        p->coef[e] = p1->coef[e] + p2->coef[e];
+        p->coef[e] = p1->coef[e] - p2->coef[e];
     }
 
     if (maior_grau == p1->grau)

@@ -80,7 +80,6 @@ polinomio* load_polinomio(char* nome)
 
 void free_polinomio(polinomio* p)
 {
-    printf("Liberando a memoria do polinomio\n");
     free(p->coef);
     free(p);
 
@@ -90,7 +89,6 @@ void free_polinomio(polinomio* p)
 int build_polinomio(polinomio* p, char* name)
 {
     FILE* file = NULL;
-    printf("Criando um arquivo chamado %s\n", name);
 
     file = fopen(name, "wb");
     if (file == NULL)
