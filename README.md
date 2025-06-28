@@ -16,7 +16,7 @@ Depois, você irá poder usar as funções ./psum, ./psub e ./pview, que estão 
 
 ## Documentação:
 
-# ./pbuild "<p>" <n>
+# ./pbuild "p" n
 Cria um arquivo para o polinomio p com o nome n.
 
 ### Argumentos:
@@ -25,13 +25,13 @@ Cria um arquivo para o polinomio p com o nome n.
     Ou seja, o polinomio "x^2-4x" não é válido, mas "1x^2-4x^1" é.
     * n: nome do polinomio. É sugerido que todos os nomes comecem com "polinomios/", para que eles sejam salvos na pasta polinomios.
 
-# ./pview <n>
+# ./pview n
 Exibe o polinomio de nome n no terminal.
 
 ### Argumentos
     * n: nome do polinomio a ser exibido no terminal.
 
-# ./psum <p1> <p2> <r>
+# ./psum p1 p2 r
 Realiza a soma r entre os polinomios p1 e p2, exibindo r no terminal. Além disso, ela cria um arquivo para o polinomio r.
 
 ### Argumentos
@@ -39,7 +39,7 @@ Realiza a soma r entre os polinomios p1 e p2, exibindo r no terminal. Além diss
     * p2: nome do polinomio a ser somado com p1.
     * r: nome do polinomio que irá armazenar resultado da soma p1 + p2.
 
-# ./psub <p1> <p2> <r>
+# ./psub p1 p2 r
 Realiza a subtração r entre os polinomios p1 e p2, exibindo r no terminal. Além disso, ela cria um arquivo para o polinomio r.
 
 ### Argumentos
