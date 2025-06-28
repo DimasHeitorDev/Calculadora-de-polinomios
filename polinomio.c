@@ -73,7 +73,6 @@ polinomio* load_polinomio(char* nome)
         p->coef[e] = c;
     }
 
-    printf("Polinomio de grau %d carregado\n", grau);
     fclose(file);
 
     return p;
@@ -81,11 +80,9 @@ polinomio* load_polinomio(char* nome)
 
 void free_polinomio(polinomio* p)
 {
-    printf("Liberando a memoria de p->coef: (%p)\n", &p->coef);
+    printf("Liberando a memoria do polinomio\n");
     free(p->coef);
-    printf("Liberando a memoria de p: (%p)\n", &p->coef);
     free(p);
-    printf("Memoria do polinomio liberada.\n");
 
     return;
 }
@@ -94,6 +91,7 @@ int build_polinomio(polinomio* p, char* name)
 {
     FILE* file = NULL;
     printf("Criando um arquivo chamado %s\n", name);
+
     file = fopen(name, "wb");
     if (file == NULL)
     {

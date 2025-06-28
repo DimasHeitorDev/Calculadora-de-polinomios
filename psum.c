@@ -56,7 +56,5 @@ int main(int arg, char** argv)
     free_polinomio(p2);
     free_polinomio(p);
 
-    printf("Encerrando programa.\n");
-
     return 0;
 }
