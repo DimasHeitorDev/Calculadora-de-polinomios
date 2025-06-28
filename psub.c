@@ -44,8 +44,10 @@ int main(int arg, char** argv)
         for (e; e <= p2->grau; e++)
             p->coef[e] = p2->coef[e];
 
+    build_polinomio(p, argv[3]);
+
     view_polinomio(p1);
-    printf("+\n");
+    printf("-\n");
     view_polinomio(p2);
     printf("-------------------------\n");
     view_polinomio(p);
