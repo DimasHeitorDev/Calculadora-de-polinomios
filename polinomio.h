@@ -14,7 +14,7 @@ typedef struct {
 polinomio* load_polinomio(char* nome);
 void free_polinomio(polinomio* p);
 
-void build_polinomio();
+int build_polinomio(polinomio* p, char* name);
 void view_polinomio(polinomio* p);
 
 #endif

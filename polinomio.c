@@ -81,59 +81,39 @@ polinomio* load_polinomio(char* nome)
 
 void free_polinomio(polinomio* p)
 {
-    printf("Liberando memória.\n");
+    printf("Liberando a memoria de p->coef: (%p)\n", &p->coef);
     free(p->coef);
-    printf("1\n");
+    printf("Liberando a memoria de p: (%p)\n", &p->coef);
     free(p);
-    printf("Memória liberada.\n");
+    printf("Memoria do polinomio liberada.\n");
+
+    return;
 }
 
-void build_polinomio(char* str_pol, char* pol_name)
+int build_polinomio(polinomio* p, char* name)
 {
     FILE* file = NULL;
-    printf("Building a file with name %s\n", pol_name);
-    file = fopen(pol_name, "wb");
-
-    int grau = 0;
-    int i;
-    for (i = 0; str_pol[i] != '\0'; i++)
+    printf("Criando um arquivo chamado %s\n", name);
+    file = fopen(name, "wb");
+    if (file == NULL)
     {
-        if (str_pol[i] == '^')
-        {
-            int coef;
-            sscanf(str_pol + i + 1, "%d", &coef);
-
-            if (coef > grau)
-                grau = coef;
-        }
+        printf("Falha ao criar arquivo.\n");
+        return 1;
     }
 
     fwrite("poly", sizeof(char), 4, file);
-    fwrite(&grau, sizeof(int), 1, file);
+    fwrite(&p->grau, sizeof(int), 1, file);
 
-    double* coef = NULL;
-    coef = calloc(grau + 1, sizeof(double));
-    
-    double c;
-    int pos = 0, e, n;
-    while (str_pol[pos] != '\0')
+    int e;
+    for (e = 0; e <= p->grau; e++)
     {
-        sscanf(str_pol + pos, "%lf%*c%*c%d%n", &c, &e, &n);
-        pos += n;
-
-        coef[e] = c;
-    }
-
-    for (e = 0; e <= grau; e++)
-    {
-        double* c = &coef[e];
+        double* c = &p->coef[e];
         fwrite(c, sizeof(double), 1, file);
     }
 
     fclose(file);
-    free(coef);
 
-    return;
+    return 0;
 }
 
 void view_polinomio(polinomio* p)
