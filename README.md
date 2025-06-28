@@ -2,10 +2,11 @@ Este é um projeto feito na disciplina de Introdução à Programação. Que con
 
 ## Modo de usar:
 
-Inicie declarando os polinomios com a função ./pbuild.
+Para iniciar o programa, abra um terminal e vá até a pasta em que esse programa se localiza.
+Comece declarando os polinômios com a função ./pbuild.
 Depois, você irá poder usar as funções ./psum, ./psub e ./pview, que estão documentadas abaixo.
 
-# exemplo de uso:
+### Exemplo de uso:
 
 ```bash
 ./pbuild "1x^2-2x^1+0.5x^0" polinomios/polinomioA
@@ -23,7 +24,7 @@ Cria um arquivo para o polinomio p com o nome n.
     * p: texto que armazena o polinomio. Deve ser da forma: "ax^p+bx^q+cx^r+...".
         * **Importante** ressaltar que esse texto não contém espaços e todos todos os vaores a, b, c, p, q, r, ... devem estar presentes.
     Ou seja, o polinomio "x^2-4x" não é válido, mas "1x^2-4x^1" é.
-    * n: nome do polinomio. É sugerido que todos os nomes comecem com "polinomios/", para que eles sejam salvos na pasta polinomios.
+    * n: nome do polinomio. É sugerido que todos os nomes comecem com "polinomios/", para que eles sejam salvos na pasta polinômios.
 
 # ./pview n
 Exibe o polinomio de nome n no terminal.
@@ -32,7 +33,7 @@ Exibe o polinomio de nome n no terminal.
     * n: nome do polinomio a ser exibido no terminal.
 
 # ./psum p1 p2 r
-Realiza a soma r entre os polinomios p1 e p2, exibindo r no terminal. Além disso, ela cria um arquivo para o polinomio r.
+Realiza a soma r entre os polinômios p1 e p2, exibindo r no terminal. Além disso, ela cria um arquivo para o polinomio r.
 
 ### Argumentos
     * p1: nome do polinomio a ser somado com p2.
@@ -40,7 +41,7 @@ Realiza a soma r entre os polinomios p1 e p2, exibindo r no terminal. Além diss
     * r: nome do polinomio que irá armazenar resultado da soma p1 + p2.
 
 # ./psub p1 p2 r
-Realiza a subtração r entre os polinomios p1 e p2, exibindo r no terminal. Além disso, ela cria um arquivo para o polinomio r.
+Realiza a subtração r entre os polinômios p1 e p2, exibindo r no terminal. Além disso, ela cria um arquivo para o polinomio r.
 
 ### Argumentos
     * p1: nome do polinomio a ser subtraído por p2.
